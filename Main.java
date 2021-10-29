@@ -26,7 +26,7 @@ class N extends M {
     }
 }
 
-public class Main extends S{
+public class Main{
     private static int count = 1;
 
     public Main(){
