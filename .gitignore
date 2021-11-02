@@ -1,5 +1,6 @@
 # Compiled class file
 *.class
+!osvclass/*.class
 
 # Log file
 *.log
