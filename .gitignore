@@ -1,6 +1,6 @@
 # Compiled class file
 *.class
-osvclass/*.class
+**/*.class
 
 # Log file
 *.log
