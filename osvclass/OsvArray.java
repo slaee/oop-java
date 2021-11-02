@@ -6,22 +6,42 @@ class ArrayList {
 
 public class OsvArray {
 
+    private int array[];
     private int count;
-    
+
     public OsvArray(){
-        super();
+        array = new int[5];// 5 entries
         count = 0;
     }
 
-    public static void add(){
+    public void add(int num){
+        array[count] = num;
+        count++;
+    }
+
+    /**
+     * Remove the first occurence number in the array
+     * 
+     * @param num
+     */
+    public void remove(int num){
         
     }
 
-    public static void addAt(int pos){
+    public void addAt(int pos){
+
+        count++;
+    }
+
+    public void removeAt(int pos){
 
     }
 
-    public static void print(int[] arr){
+    public boolean isEmpty(){
+        return count == 0;
+    }
+
+    public void print(int[] arr){
 
     }
 }
