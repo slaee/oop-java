@@ -1,9 +1,5 @@
 package osvclass;
 
-class ArrayList {
-    
-}
-
 public class OsvArray {
 
     private int array[];
