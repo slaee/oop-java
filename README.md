@@ -1,5 +1,5 @@
-# `Object Oriented Programming in Java`
+# Object Oriented Programming in Java
 
->### Composed by `Sly Bacalso`
+>### Composed by Sly Bacalso
 
 &emsp;&emsp; Run this with feelings
