@@ -1,4 +1,4 @@
-package osvclass;
+package oop;
 
 public class OsvArray {
 
