@@ -8,7 +8,7 @@
  * * HAPPY HACKING :))
  */
 
-public class OSV{
+public class Main{
     
     // TODO: test and create objects here
     public static void main(String [] args) {

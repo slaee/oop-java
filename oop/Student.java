@@ -1,5 +1,4 @@
-package osvclass;
-
+package oop;
 
 public class Student {
     // default value is null for objects and 0 numbers
