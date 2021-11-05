@@ -39,4 +39,24 @@ public class OsvMath {
         fd /= gcd;
         System.out.println(wholeNumber+" "+fn+"/"+fd);
     }
+
+    // calculate the sum of two fractions
+    public static void sumFraction(int numerator1, int denominator1, int numerator2, int denominator2){
+        int fn1 = numerator1;
+        int fd1 = denominator1;
+        int fn2 = numerator2;
+        int fd2 = denominator2;
+        int gcd = euclideanGcd(fn1, fd1);
+        fn1 /= gcd;
+        fd1 /= gcd;
+        gcd = euclideanGcd(fn2, fd2);
+        fn2 /= gcd;
+        fd2 /= gcd;
+        int fn = fn1 * fd2 + fn2 * fd1;
+        int fd = fd1 * fd2;
+        gcd = euclideanGcd(fn, fd);
+        fn /= gcd ;
+        fd /= gcd;
+        System.out.println(fn+"/"+fd);
+    }
 }
