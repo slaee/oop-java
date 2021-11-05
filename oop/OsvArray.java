@@ -172,19 +172,20 @@ public class OsvArray {
      * @return count of removed elements
      */
     public int removeAll(int element){
-        int count = 0;
+        int cnt = 0;
         for(int i = 0; i < count; i++){
             if(array[i] == element){
-                for(int j = i; j < count - 1; j++){
-                    array[j] = array[j + 1];
-                }
-                count++;
+                cnt++;
+                removeAt(i);
+                i--;
             }
         }
-        return count;
+        return cnt;
     }
 
-    // reverse the array
+    /**
+     * Reverse the array
+     */
     public void reverse(){
         int[] temp = new int[array.length];
         for(int i = 0; i < count; i++){
