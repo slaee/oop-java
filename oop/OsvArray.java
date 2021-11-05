@@ -131,18 +131,24 @@ public class OsvArray {
             System.out.println(val);
     } 
 
+    // return size of array
+    public int size(){
+        return count;
+    }
+
     /**
      * Adds an element to the specified index
      * @param index
      * @param element
      */
     public void addAt(int element, int index){
-        if(count == array.length){
+        if(size() == array.length){
             //array is full
             int[] temp = new int[array.length * 2];
             for(int i = 0; i < array.length; i++){
                 temp[i] = array[i];
             }
+            array = temp;
         }
         for(int i = count; i > index; i--){
             array[i] = array[i - 1];
