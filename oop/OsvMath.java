@@ -14,7 +14,7 @@ public class OsvMath {
      * @return a
      * @see https://en.wikipedia.org/wiki/Euclidean_algorithm
      */
-    public static int euclideanGcd(int fn, int fd){
+    private static int euclideanGcd(int fn, int fd){
         int a = fn, b = fd;
         while(b != 0){
             int t = b;
@@ -24,8 +24,13 @@ public class OsvMath {
         return a;
     }
 
+    // eclideans gcd
+    public static int gcd(int a, int b){
+        return euclideanGcd(a, b);
+    }
+
     /**
-     * This method wi
+     * Gets mixed fraction from the given fraction
      * @param numerator
      * @param denominator
      */
@@ -33,29 +38,25 @@ public class OsvMath {
         int wholeNumber = numerator / denominator;
         int fn = numerator % denominator;
         int fd = denominator;
-        int gcd = euclideanGcd(fn, fd);
-
+        int gcd = gcd(fn, fd);
         fn /= gcd;
         fd /= gcd;
         System.out.println(wholeNumber+" "+fn+"/"+fd);
     }
 
-    // calculate the sum of two fractions
-    public static void sumFraction(int numerator1, int denominator1, int numerator2, int denominator2){
-        int fn1 = numerator1;
-        int fd1 = denominator1;
-        int fn2 = numerator2;
-        int fd2 = denominator2;
-        int gcd = euclideanGcd(fn1, fd1);
-        fn1 /= gcd;
-        fd1 /= gcd;
-        gcd = euclideanGcd(fn2, fd2);
-        fn2 /= gcd;
-        fd2 /= gcd;
+    /**
+     * Sums two fractions
+     * O(1) time complexity
+     * @param fn1
+     * @param fd1
+     * @param fn2
+     * @param fd2
+     */
+    public static void sumOfFractions(int fn1, int fd1, int fn2, int fd2){
         int fn = fn1 * fd2 + fn2 * fd1;
         int fd = fd1 * fd2;
-        gcd = euclideanGcd(fn, fd);
-        fn /= gcd ;
+        int gcd = gcd(fn, fd);
+        fn /= gcd;
         fd /= gcd;
         System.out.println(fn+"/"+fd);
     }
