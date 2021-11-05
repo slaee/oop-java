@@ -5,6 +5,7 @@
  * @version: 1.0
  * @classname: OsvArray
  * @github: https://github.com/slyg3nius/oop-java.git
+ * @csdn: https://blog.csdn.net/sly_g3nius
  */
 
 package oop;
@@ -214,6 +215,7 @@ public class OsvArray {
             temp[i] = temp[minIndex];
             temp[minIndex] = temp2;
         }
+        array = temp;
     }
     
     /**
