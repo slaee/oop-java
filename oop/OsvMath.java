@@ -11,9 +11,9 @@
 package oop;
 
 public class OsvMath {
-    public OsvMath(){
-
-    }
+    
+    // constructor
+    public OsvMath() {}
 
     /**
      * Calcualtes the the fraction numerator and 
