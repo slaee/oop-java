@@ -60,4 +60,27 @@ public class OsvMath {
         fd /= gcd;
         System.out.println(fn+"/"+fd);
     }
+
+    /** 
+     * Sums two fractions that caters mixed fractions
+     * O(1) time complexity
+     * @param fn1
+     * @param fd1
+     * @param fn2
+     * @param fd2
+     */
+    public static void sumOfFractions(int fn1, int fd1, int fn2, int fd2, boolean isMixed){
+        int fn = fn1 * fd2 + fn2 * fd1;
+        int fd = fd1 * fd2;
+        int gcd = gcd(fn, fd);
+        fn /= gcd;
+        fd /= gcd;
+        if(isMixed){
+            int wholeNumber = fn / fd;
+            fn %= fd;
+            System.out.println(wholeNumber+" "+fn+"/"+fd);
+        }else{
+            System.out.println(fn+"/"+fd);
+        }
+    }
 }
