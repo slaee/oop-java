@@ -241,4 +241,16 @@ public class OsvArray {
             } 
         }
     }
+
+    // override toString() method
+    public String toString(){
+        StringBuffer str = new StringBuffer();
+        for(int i = 0; i < count; i++){
+            str.append(array[i]) ;
+            if(i != count - 1){
+                str.append(", ");
+            } 
+        }
+        return str.toString();
+    }
 }
