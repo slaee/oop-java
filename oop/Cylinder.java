@@ -5,7 +5,7 @@
  * @github: github.com/slyg3nius
  */
 
-import java.util.*;
+package oop;
 
 class MyPoint{
     private int x;
@@ -149,34 +149,5 @@ public class Cylinder {
             return this.base.getArea() == c.base.getArea() && this.height == c.height;
         }
         return false;
-    }
-
-    public static void main(String[] args) {
-        
-        switch(new Scanner(System.in).nextInt()){
-            case 1: {
-                Cylinder c = new Cylinder();
-                c.setCircle(10,20,4.5f);
-                c.setHeight(10);
-                System.out.printf("Radius: %.2f\n",c.getCircle().getRadius());
-                System.out.println("Point: "+c.getCircle().getCenter());
-                System.out.printf("Height: %.2f\n",c.getHeight());
-                break;
-            }
-                
-            case 2:
-                Cylinder c = new Cylinder(new Circle(5,5,10.5f),25);
-                System.out.println(c);
-                System.out.println("Area: "+c.getArea());
-                System.out.println("Volume: "+c.getVolume());
-                break;
-            case 3:
-                Cylinder c1 = new Cylinder(new Circle(5,5,5),10);
-                Cylinder c2 = new Cylinder(new Circle(5,5,5),10);
-                Circle circle = new Circle(5,5,5);
-                System.out.println(c1.equals(c2));
-                System.out.println(c1.equals(circle));
-                break;
-        }
     }
 }
